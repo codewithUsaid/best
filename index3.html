@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HyperTech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0f1c;
+    }
+
+    .navb{
+      background-color: black;
+      width: 100%;
+      height: 100px;
+      padding-top: 10px;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #150a3c;
+      padding: 5px 10px;
+      border-radius: 30px;
+      padding-bottom: 5px;
+      margin: 20px 190px;
+    }
+
+    .navbar .logo img {
+      width: 150px;
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+
+    .navbar ul {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li {
+      list-style-type: none;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: rgb(200, 200, 200);
+      font-size: 14px;
+      padding: 5px;
+    }
+
+    .navbar a:hover {
+      border-bottom: 2px solid #008be2;
+      color: #ffffff;
+    } 
+    
+    .navbar a:active {
+      color: #ffffff;
+    }
+
+    .navbar .right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .navbar .right span {
+      color: #bbb;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .navbar .right span:hover {
+      border-bottom: 2px solid #008be2;
+      color: #fff;
+    }
+
+    .search-box {
+      background: white;
+      border-radius: 20px;
+      width: 140px;
+      height: 30px;
+      padding: 5px 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .search-box p {
+      margin: 0 auto;
+      font-size: 15px;
+      color: #1b0d50;
+      font-weight: bold;
+    }
+
+    .search-box:hover{
+      background: #abdfff;
+      color: #ffffff;
+
+    }
+
+  section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  color: rgb(255, 255, 255);
+  padding-left: 60px;
+  margin-top: 85px;
+  margin-right: 40px;
+}
+h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+ h1 {
+  font-size: 110px;
+  font-weight: bold;
+  color: orangered;
+}
+
+.stats-left p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.stats-right img {
+  width: 1000px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(4, 163, 255, 0.4);
+  margin-right: 10px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 60px;
+  gap: 30px;
+  background-color: #1e1e2f;
+  margin-left: 35px;
+  border-radius: 10px;
+  margin-top: 90px;
+  
+}
+
+.service {
+  padding: 20px;
+  border-top: 2px solid var(--accent-blue);
+}
+
+.service h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+     
+
+    .heading {
+      color: #00e5ff;
+      text-align: center;
+      font-size: 40px;
+      margin: 50px 20px 30px 20px;
+    }
+
+    .title {
+      width: 290px;
+      background-color: #1e1e2f;
+      height: 50px;
+      display: flex;
+      /* gap: 40px; */
+      align-items: center;
+      /* padding-left:  30px; */
+      margin: auto;
+      margin-bottom: 30px;
+      border-radius: 50px;
+      border: #007784 solid 1px;
+    }
+
+    .tb {
+      color: #e1e1e1;
+      font-size: 16px;
+      cursor: pointer;
+
+      height: 20px;
+      padding: 15px 18px;
+      margin-left: 1px;
+      padding-left: 19px;
+    }
+
+    .tb:hover {
+      color: #fff;
+      background-color: #008be2;
+    }
+
+    .tb1{
+      border-radius: 50px 0px 0px 50px;
+    }
+
+    .tb2{
+      border-radius: 0px 50px 50px 0px;
+    }
+
+    /* Cards */
+    #card {
+      margin: 40px 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .box {
+      width: 28%;
+      background-color: #1e1e2f;
+      color: #fff;
+      border-radius: 20px;
+      height: 450px;
+      margin: 7px 0px;
+    }
+
+    .box img {
+      border-radius: 10px 10px 0px 0px;
+      width: 100%;
+      height: 265px;
+      object-fit: cover;
+    }
+
+.iconb {
+  display: flex;
+  justify-content: space-between; 
+  margin: 20px;
+}
+
+.iconb div {
+  display: flex;
+  align-items: center; 
+  gap: 6px; 
+}
+
+.iconb img {
+  width: 25px;  
+  height: 25px;
+}
+
+.iconb p {
+  margin: 0;
+  font-size: 18px;
+  color: #cccccc;
+  font-weight: bold;
+}
+
+    .box:hover {
+      border-bottom: orangered solid 2px;
+    }
+
+    .box h2 {
+      margin: 0px 20px;
+      font-size: 25px;
+    }
+
+    .box h3 {
+      margin: 20px 20px 0px 20px;
+      font-size: 45px;
+      color: orangered;
+    }
+
+
+
+    /* Footer */
+    footer {
+      background: #1e1e2f;
+      padding: 50px 80px 20px;
+      color: #fff;
+      margin-top: 150px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    .footer-logo img {
+      width: 140px;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .subscribe-box {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-box input {
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      width: 220px;
+      flex: 1;
+    }
+
+    .subscribe-box button {
+      background: #3700ff;
+      border: none;
+      padding: 10px 18px;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-size: 14px;
+    }
+
+    .subscribe-box button:hover {
+      background: #008be2;
+    }
+
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-gallery h3 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .footer-links ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-contact p {
+      margin: 8px 0;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #444;
+      margin-top: 30px;
+      padding-top: 15px;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+
+    .social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #3700ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #008be2;
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="navb">
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="">
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Vehicles</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="right">
+        <span>EN</span>
+        <span>Login</span>
+        <div class="search-box">
+          <p>Install VPN</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="home">
+    <img src="img/usaid2.png" alt="" width="100%">
+  </div>
+
+
+<section class="stats-section">
+  <div class="stats-left">
+    <h5>Our Happy Customers</h5>
+    <h1>8500<span>+</span></h1>
+    <p>We Focus on All Our Services</p>
+  </div>
+  <div class="stats-right">
+    <img src="img/usaid3.png" alt="Happy Customers">
+  </div>
+</section>
+
+<section class="services">
+  <div class="service">
+    <h2>01</h2>
+    <h3>Highly Secured</h3>
+    <p>Ensuring top-tier security, our system employs advanced encryption and multi-factor authentication, guaranteeing highly secured protection for your sensitive data.</p>
+  </div>
+  <div class="service">
+    <h2>02</h2>
+    <h3>Trusted Agents</h3>
+    <p>Trusted Agents, your reliable partner in automotive excellence. Experience top-notch service and quality vehicles for a seamless journey ahead.</p>
+  </div>
+  <div class="service">
+    <h2>03</h2>
+    <h3>Free Support</h3>
+    <p>At our car shop, enjoy peace of mind with our "Free Support" service. We prioritize customer satisfaction, offering expert assistance for worry-free driving experiences.</p>
+  </div>
+</section>
+
+
+
+  <h2 class="heading">Find your Ideal Ride Waiting <br> Just For You</h2>
+
+  <!-- Tabs -->
+  <div class="title">
+    <div class="tb tb1">All</div>
+    <div class="tb">New</div>
+    <div class="tb">Popular</div>
+    <div class="tb tb2">Used</div>
+  </div>
+
+  <!-- Cards -->
+  <div id="card">
+    <div class="box">
+      <img src="img/car1.png" alt="">
+      <div class="iconb">
+        <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+        <div class="icon2"><img src="img/icon3.png" alt=""><p>654km</p></div>
+        <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+      </div>
+      <h2>McLaren 720S</h2>
+      <h3>$20,000</h3>
+    </div>
+    <div class="box">
+      <img src="img/car2.png" alt="">
+      <div class="iconb">
+        <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+        <div class="icon2"><img src="img/icon3.png" alt=""><p>540km</p></div>
+        <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+      </div>
+      <h2>Lamborghini Aventador SV</h2>
+      <h3>$10,000</h3>
+    </div>
+    <div class="box">
+      <img src="img/car3.png" alt="">
+      <div class="iconb">
+        <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+        <div class="icon2"><img src="img/icon3.png" alt=""><p>430km</p></div>
+        <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+      </div>
+      <h2>BMW 1 Series (F20)</h2>
+      <h3>$50,000</h3>
+    </div>
+  </div>
+
+  
+  <div id="card">
+
+
+    <div class="box">
+      <img src="img/car4.png" alt="">
+      <div class="iconb">
+        <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+        <div class="icon2"><img src="img/icon3.png" alt=""><p>460km</p></div>
+        <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+      </div>
+      <h2>Dodge Challenger SRT Hellcat</h2>
+      <h3>$34,000</h3>
+    </div>
+    <div class="box">
+      <img src="img/car5.png" alt="">
+      <div class="iconb">
+        <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+        <div class="icon2"><img src="img/icon3.png" alt=""><p>566km</p></div>
+        <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+      </div>
+      <h2>Acura RXS Type-S</h2>
+      <h3>$43,000</h3>
+    </div>
+    <div class="box">
+      <img src="img/car6.png" alt="">
+      <div class="iconb">
+        <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+        <div class="icon2"><img src="img/icon3.png" alt=""><p>640km</p></div>
+        <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+      </div>
+      <h2>BMW 120D 2008 E82</h2>
+      <h3>$24,000</h3>
+    </div> 
+
+    </div>  
+
+
+    <div id="card">
+
+
+        <div class="box">
+            <img src="img/car7.png" alt="">
+            <div class="iconb">
+              <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+              <div class="icon2"><img src="img/icon3.png" alt=""><p>540km</p></div>
+              <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+            </div>
+            <h2>Ferrari 458 Italia Vorsteiner</h2>
+      <h3>$124,000</h3>
+        </div>
+        <div class="box">
+            <img src="img/car8.png" alt="">
+            <div class="iconb">
+              <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+              <div class="icon2"><img src="img/icon3.png" alt=""><p>240km</p></div>
+              <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+            </div>
+            <h2>Ford Mustang Mach 1  2024</h2>
+      <h3>$14,000</h3>
+        </div>
+        <div class="box">
+            <img src="img/car9.png" alt="">
+            <div class="iconb">
+              <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+              <div class="icon2"><img src="img/icon3.png" alt=""><p>140km</p></div>
+              <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+            </div>
+            <h2>Bugatti Chiron  2019</h2>
+      <h3>$65,000</h3>
+        </div> 
+
+    </div>  
+    
+    
+    <div id="card">
+        <div class="box">
+            <img src="img/car10.png" alt="">
+            <div class="iconb">
+              <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+              <div class="icon2"><img src="img/icon3.png" alt=""><p>160km</p></div>
+              <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+            </div>
+            <h2> Dodge Durango SXT AWD</h2>
+      <h3>$643,000</h3>
+        </div>
+        <div class="box">
+            <img src="img/car11.png" alt="">
+            <div class="iconb">
+              <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+              <div class="icon2"><img src="img/icon3.png" alt=""><p>130km</p></div>
+              <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+            </div>
+            <h2>Ford Mustang GT 2018</h2>
+      <h3>$653,000</h3>
+        </div>
+        <div class="box">
+            <img src="img/car12.png" alt="">
+            <div class="iconb">
+              <div class="icon1"><img src="img/icon1.png" alt=""><p>Electric</p></div>
+              <div class="icon2"><img src="img/icon3.png" alt=""><p>210km</p></div>
+              <div class="icon3"><img src="img/icon2.png" alt=""><p>Automatic</p></div>
+            </div>
+            <h2>lamborghini-huracan</h2>
+      <h3>$29,000</h3>
+        </div>
+    </div>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="img/logo.png" alt="">
+      <p>“HyperTech is driven by innovation, delivering smart solutions and premium digital experiences.”</p>
+      <div class="subscribe-box">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+      <!-- Social icons -->
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h3>About Us</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Car Listing</a></li>
+        <li><a href="#">Talk To Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact Info</h3>
+      <p>455 West Orchard Street</p>
+      <p>Kings Mountain, NC 280867</p>
+      <p>📞 +088 (246) 642-27-10</p>
+    </div>
+
+    <div class="footer-gallery">
+      <h3>Our Gallery</h3>
+      <div class="gallery-grid">
+        <img src="img/car1.png" alt="">
+        <img src="img/car2.png" alt="">
+        <img src="img/car3.png" alt="">
+        <img src="img/car4.png" alt="">
+        <img src="img/car5.png" alt="">
+        <img src="img/car6.png" alt="">
+        <img src="img/car7.png" alt="">
+        <img src="img/car8.png" alt="">
+        <img src="img/car9.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    HyperTech — Powering the Future. All Rights Reserved
+  </div>
+</footer>
+
+
+</body>
+</html>
